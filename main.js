@@ -1,25 +1,15 @@
 (function(){
-var cur="ar";
-try{var s=localStorage.getItem("lang");if(s==="en"||s==="ar")cur=s}catch(e){}
-function apply(l){
-  cur=l;
-  document.documentElement.lang=l;
-  document.documentElement.dir=l==="ar"?"rtl":"ltr";
-  document.querySelectorAll("[data-ar]").forEach(function(el){el.innerHTML=el.getAttribute("data-"+l)});
-  document.querySelectorAll("option[data-en]").forEach(function(o){o.textContent=l==="en"?o.getAttribute("data-en"):o.value});
-  var b=document.getElementById("lang");if(b)b.textContent=l==="ar"?"English":"العربية";
-  try{localStorage.setItem("lang",l)}catch(e){}
-}
-var lb=document.getElementById("lang");
-if(lb)lb.addEventListener("click",function(){apply(cur==="ar"?"en":"ar")});
-if(cur==="en")apply("en");
-
 var y=document.getElementById("y");if(y)y.textContent=new Date().getFullYear();
+var L=document.documentElement.lang;
 
+// mobile menu
 var bg=document.getElementById("burger"),mn=document.getElementById("menu");
-if(bg)bg.addEventListener("click",function(){mn.classList.toggle("open")});
+if(bg&&mn){
+  bg.addEventListener("click",function(){var o=mn.classList.toggle("open");bg.setAttribute("aria-expanded",o?"true":"false")});
+  mn.addEventListener("click",function(e){if(e.target.tagName==="A"){mn.classList.remove("open");bg.setAttribute("aria-expanded","false")}});
+}
 
-// reveal
+// reveal on scroll
 var els=document.querySelectorAll(".rv");
 if("IntersectionObserver" in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
@@ -37,24 +27,28 @@ chips.forEach(function(c){c.addEventListener("click",function(){
   });
 })});
 
+// lightbox
+var lb=document.getElementById("lb");
+if(lb){var li=lb.querySelector("img");
+  document.querySelectorAll(".shot").forEach(function(f){f.addEventListener("click",function(){li.src=f.querySelector("img").src;lb.classList.add("on")})});
+  lb.addEventListener("click",function(){lb.classList.remove("on")});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")lb.classList.remove("on")});}
+
+// progress bars in table
+var bars=document.querySelectorAll(".pbar");
+function setBar(b){b.style.width=(b.getAttribute("data-w")*0.9)+"px"}
+if(bars.length&&"IntersectionObserver" in window){
+  var bo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){setBar(e.target);bo.unobserve(e.target)}})},{threshold:.3});
+  bars.forEach(function(b){bo.observe(b)});
+}else{bars.forEach(setBar)}
+
 // contact form -> WhatsApp
 var cf=document.getElementById("cf");
 if(cf)cf.addEventListener("submit",function(e){
   e.preventDefault();
   var n=document.getElementById("fn").value.trim(),sv=document.getElementById("fs").value,m=document.getElementById("fm").value.trim();
-  var msg=(cur==="ar"?"مرحباً ميراج، أنا ":"Hello Mirage, I'm ")+(n||"-")+(cur==="ar"?"\nالخدمة: ":"\nService: ")+sv+(m?(cur==="ar"?"\nالتفاصيل: ":"\nDetails: ")+m:"");
-  window.open("https://wa.me/201095453622?text="+encodeURIComponent(msg),"_blank");
+  var ar=L==="ar";
+  var msg=(ar?"مرحباً ميراج، أنا ":"Hello Mirage, I'm ")+(n||"-")+(ar?"\nالخدمة: ":"\nService: ")+sv+(m?(ar?"\nالتفاصيل: ":"\nDetails: ")+m:"");
+  window.open("https://wa.me/201095453622?text="+encodeURIComponent(msg),"_blank","noopener");
 });
-})();
-(function(){
-var lb=document.getElementById("lb");
-if(lb){var li=lb.querySelector("img");
-document.querySelectorAll(".shot").forEach(function(f){f.addEventListener("click",function(){li.src=f.querySelector("img").src;lb.classList.add("on")})});
-lb.addEventListener("click",function(){lb.classList.remove("on")});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")lb.classList.remove("on")});}
-var bars=document.querySelectorAll(".bar");
-if(bars.length&&"IntersectionObserver" in window){
- var bo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var w=e.target.getAttribute("data-w");e.target.style.width=(w*0.9)+"px";bo.unobserve(e.target)}})},{threshold:.3});
- bars.forEach(function(b){bo.observe(b)});
-}else{bars.forEach(function(b){b.style.width=(b.getAttribute("data-w")*0.9)+"px"})}
 })();
