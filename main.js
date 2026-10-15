@@ -46,3 +46,15 @@ if(cf)cf.addEventListener("submit",function(e){
   window.open("https://wa.me/201095453622?text="+encodeURIComponent(msg),"_blank");
 });
 })();
+(function(){
+var lb=document.getElementById("lb");
+if(lb){var li=lb.querySelector("img");
+document.querySelectorAll(".shot").forEach(function(f){f.addEventListener("click",function(){li.src=f.querySelector("img").src;lb.classList.add("on")})});
+lb.addEventListener("click",function(){lb.classList.remove("on")});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")lb.classList.remove("on")});}
+var bars=document.querySelectorAll(".bar");
+if(bars.length&&"IntersectionObserver" in window){
+ var bo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var w=e.target.getAttribute("data-w");e.target.style.width=(w*0.9)+"px";bo.unobserve(e.target)}})},{threshold:.3});
+ bars.forEach(function(b){bo.observe(b)});
+}else{bars.forEach(function(b){b.style.width=(b.getAttribute("data-w")*0.9)+"px"})}
+})();
