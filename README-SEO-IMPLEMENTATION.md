@@ -24,6 +24,7 @@ This package contains the static website source plus the SEO and localized landi
 - `/egypt/marketing-strategy.html`
 - `/egypt/guide-choosing-agency.html`
 - `/saudi-arabia/`
+- `/saudi-arabia/digital-marketing.html`
 - `/saudi-arabia/website-design.html`
 - `/saudi-arabia/riyadh-website-design.html`
 - `/uae/`
@@ -40,17 +41,16 @@ This package contains the static website source plus the SEO and localized landi
 
 This is a static-source validation, not a production Lighthouse/PageSpeed run or a live Google indexing/ranking test.
 
-## Before deployment
+## Post-deployment checks
 
-1. Confirm all service descriptions, portfolio references, contact details, and claims are accurate.
-2. Upload the contents of this package to the website's document root, preserving the `en/`, `assets/`, `egypt/`, `saudi-arabia/`, and `uae/` folders.
-3. Confirm HTTPS and the preferred `www` host redirect consistently to `https://www.mirageemarketing.com/` (or adjust all canonical URLs and sitemap URLs if the preferred host differs).
-4. Open `/robots.txt` and `/sitemap.xml` on the live domain and confirm they return HTTP 200.
-5. In Google Search Console, inspect the homepage and new priority URLs, submit the sitemap, and request indexing for the most important landing pages. Indexing and ranking are determined by Google and are not guaranteed by deployment.
-6. Connect or review GA4 and Search Console to track organic clicks, impressions, target queries, and qualified leads.
+1. Confirm all service descriptions, portfolio references, contact details, and claims remain accurate.
+2. Confirm `/robots.txt` and `/sitemap.xml` return HTTP 200 on the live domain.
+3. In Google Search Console, inspect the homepage and priority landing pages, submit the sitemap, and request indexing where appropriate. Indexing and ranking are determined by Google and are not guaranteed by deployment.
+4. Review GA4 and Search Console regularly to track organic clicks, impressions, target queries, and qualified leads.
 
 ## Important notes
 
 - The pages describe services delivered remotely. They do not claim MIRAGE has a physical branch in Riyadh or Dubai.
 - The guide page targets comparison intent around "best company" queries by explaining selection criteria; it does not make an unsupported claim that MIRAGE is objectively the best provider.
-- The package has not been uploaded to production. No live DNS, hosting, Search Console, or analytics settings were changed.
+- The source was deployed to the Vercel Production target; the deployment reported `READY` and includes the `www.mirageemarketing.com` alias.
+- No Search Console sitemap submission, indexing request, or live Lighthouse/PageSpeed audit was performed as part of that deployment.
