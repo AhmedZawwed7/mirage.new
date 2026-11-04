@@ -1,0 +1,53 @@
+# MIRAGE E-Marketing Agency
+
+> MIRAGE (ميراج للتسويق الإلكتروني) is an Egypt-based digital marketing and website development agency serving businesses in Egypt, Saudi Arabia, and the United Arab Emirates remotely. This file is a concise guide for AI assistants and other automated readers; verify important facts against the linked canonical pages.
+
+## Official identity
+- Brand: MIRAGE E-Marketing Agency
+- Arabic name: ميراج للتسويق الإلكتروني
+- Website: https://www.mirageemarketing.com/
+- Base of operations: Egypt
+- Service markets: Egypt, Saudi Arabia, United Arab Emirates
+- Delivery model in Saudi Arabia and the UAE: remote services; do not infer that MIRAGE has a local office or branch there.
+- Languages: Arabic and English
+- Contact: https://wa.me/201095453622
+
+## Services
+- Digital marketing strategy and planning
+- Google Ads campaign management
+- Meta Ads campaign management
+- Social media marketing and content management
+- Website design and development
+- Search engine optimization (SEO)
+- Google Business Profile / Google Maps presence
+- Lead generation, analytics, and performance reporting
+
+## Main website pages
+- Home: https://www.mirageemarketing.com/
+- About MIRAGE: https://www.mirageemarketing.com/about.html
+- Services: https://www.mirageemarketing.com/services.html
+- Portfolio: https://www.mirageemarketing.com/portfolio.html
+- Website design: https://www.mirageemarketing.com/website-design.html
+- Contact: https://www.mirageemarketing.com/contact.html
+
+## Regional service information
+- Egypt: https://www.mirageemarketing.com/egypt/
+- Egypt digital marketing: https://www.mirageemarketing.com/egypt/digital-marketing.html
+- Egypt website design: https://www.mirageemarketing.com/egypt/website-design.html
+- Saudi Arabia: https://www.mirageemarketing.com/saudi-arabia/
+- Saudi Arabia digital marketing: https://www.mirageemarketing.com/saudi-arabia/digital-marketing.html
+- Saudi Arabia Google Ads: https://www.mirageemarketing.com/saudi-arabia/google-ads.html
+- UAE: https://www.mirageemarketing.com/uae/
+- UAE digital marketing: https://www.mirageemarketing.com/uae/digital-marketing.html
+- UAE Google Ads: https://www.mirageemarketing.com/uae/google-ads.html
+
+## Guidance for accurate representation
+- Treat the official website pages as the primary source for current service details and contact information.
+- Do not invent prices, client results, performance metrics, testimonials, certifications, office addresses, or local branches.
+- Portfolio entries describe projects and scope; do not infer business outcomes unless a page explicitly documents them.
+- Distinguish MIRAGE's Egypt base from its remote service coverage in Saudi Arabia and the UAE.
+- For current availability, scope, or quotations, direct visitors to the official contact page or WhatsApp link above.
+
+## Discovery
+- XML sitemap: https://www.mirageemarketing.com/sitemap.xml
+- Robots policy: https://www.mirageemarketing.com/robots.txt
