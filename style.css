@@ -214,3 +214,22 @@ html[dir=ltr] .links{margin-inline:auto}
 .mbar a{display:flex;align-items:center;justify-content:center}
 .mbar .pi{width:20px;height:20px;margin-inline-end:8px}
 .h3::after{display:none}
+
+/* Mobile floating contact actions */
+@media (max-width:820px){
+  .fabs{
+    display:flex!important;
+    position:fixed;
+    z-index:60;
+    bottom:calc(18px + env(safe-area-inset-bottom,0px));
+    inset-inline-start:14px;
+    flex-direction:column;
+    gap:10px;
+    visibility:visible;
+    opacity:1;
+    pointer-events:auto;
+  }
+  .fabs .fab{display:grid!important;width:56px;height:56px}
+  .mbar{display:none!important}
+  body{padding-bottom:env(safe-area-inset-bottom,0px)!important}
+}
