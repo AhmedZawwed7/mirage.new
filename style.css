@@ -233,3 +233,5 @@ html[dir=ltr] .links{margin-inline:auto}
   .mbar{display:none!important}
   body{padding-bottom:env(safe-area-inset-bottom,0px)!important}
 }
+/* Numeric highlights */
+.num,.step b,.kpis b,.hs b,td.cost{color:#D90043}
