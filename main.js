@@ -1,3 +1,16 @@
+// Google Analytics 4 — site-wide measurement
+if (!window.__mirageGa4Loaded) {
+  window.__mirageGa4Loaded = true;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-EHEL0THV3R');
+  var gaScript = document.createElement('script');
+  gaScript.async = true;
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-EHEL0THV3R';
+  document.head.appendChild(gaScript);
+}
+
 (function(){
 var y=document.getElementById("y");if(y)y.textContent=new Date().getFullYear();
 var L=document.documentElement.lang;
