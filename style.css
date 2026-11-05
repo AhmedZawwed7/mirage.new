@@ -1,5 +1,5 @@
 :root{--bg:#f3f7ff;--surface:#fff;--text:#102b52;--muted:#536985;--line:#d7e4f5;--glass:rgba(255,255,255,.82);
---c1:#1557b7;--c2:#2867d5;--c3:#ff762b;--c4:#48a9e8;--c5:#10b981;--c6:#2867d5;--btn-text:#fff}
+--c1:#3478d8;--c2:#4b8ce8;--c3:#d90043;--c4:#48a9e8;--c5:#10b981;--c6:#4b8ce8;--btn-text:#fff}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#071a35;--surface:#10294b;--text:#f1f6ff;--muted:#b3c5dc;--line:#29466b;--glass:rgba(7,26,53,.82)}}
 :root[data-theme="dark"]{--bg:#071a35;--surface:#10294b;--text:#f1f6ff;--muted:#b3c5dc;--line:#29466b;--glass:rgba(7,26,53,.82)}
 *{box-sizing:border-box}
