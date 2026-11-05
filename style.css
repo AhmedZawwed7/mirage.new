@@ -115,7 +115,7 @@ h2::after{content:"";display:block;width:60px;height:5px;border-radius:5px;margi
 .fgrid a:hover{color:var(--c1)}
 .fgrid p{color:var(--muted);font-size:.9rem}
 .copy{margin-top:22px;text-align:center;color:var(--muted);font-size:.82rem}
-.wafab{position:fixed;z-index:30;bottom:calc(18px + env(safe-area-inset-bottom,0px));inset-inline-start:18px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;text-decoration:none;background:#D90043;box-shadow:0 10px 26px -6px #D90043;animation:wob 3s ease-in-out infinite}
+.wafab{position:fixed;z-index:30;bottom:calc(18px + env(safe-area-inset-bottom,0px));inset-inline-start:18px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;text-decoration:none;background:#25D366;box-shadow: 0 10px 26px -6px #25D366;animation:wob 3s ease-in-out infinite}
 @keyframes wob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 /* reveal */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
@@ -144,13 +144,13 @@ h2::after{content:"";display:block;width:60px;height:5px;border-radius:5px;margi
 .fabs{position:fixed;z-index:30;bottom:calc(18px + env(safe-area-inset-bottom,0px));inset-inline-start:18px;display:flex;flex-direction:column;gap:10px}
 .fab{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:1.5rem;text-decoration:none;box-shadow:0 10px 26px -6px rgba(0,0,0,.4);animation:wob 3s ease-in-out infinite}
 .fab.call{background:linear-gradient(135deg,var(--c1),var(--c2));animation-delay:-1.5s}
-.fab.wa{background:#D90043}
+.fab.wa{background:#25D366}
 .mbar{display:none}
 @media (max-width:820px){
  .fabs{display:none}
  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;z-index:40;bottom:0;inset-inline:0;padding-bottom:env(safe-area-inset-bottom,0px);background:var(--surface);border-top:1px solid var(--line)}
  .mbar a{text-align:center;padding:12px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(90deg,var(--c1),var(--c2))}
- .mbar a.w{background:#D90043}
+ .mbar a.w{background:#25D366}
  body{padding-bottom:calc(52px + env(safe-area-inset-bottom,0px))}
  .strip .callnow{display:none}
 }
