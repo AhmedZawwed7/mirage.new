@@ -55,6 +55,19 @@ if(bars.length&&"IntersectionObserver" in window){
   bars.forEach(function(b){bo.observe(b)});
 }else{bars.forEach(setBar)}
 
+// GA4 lead interaction tracking (site-wide)
+document.addEventListener("click",function(e){
+  var a=e.target&&e.target.closest?e.target.closest("a[href]"):null;
+  if(!a||!window.gtag)return;
+  var href=(a.getAttribute("href")||"").trim();
+  var text=(a.innerText||a.getAttribute("aria-label")||"").trim().slice(0,80);
+  if(/wa\.me\//i.test(href)||/api\.whatsapp\.com/i.test(href)||/whatsapp\.com\//i.test(href)){
+    window.gtag("event","whatsapp_click",{link_url:href,link_text:text,page_location:window.location.href});
+  }else if(/^tel:/i.test(href)){
+    window.gtag("event","phone_click",{link_url:href,link_text:text,page_location:window.location.href});
+  }
+});
+
 // contact form -> WhatsApp
 var cf=document.getElementById("cf");
 if(cf)cf.addEventListener("submit",function(e){
@@ -62,6 +75,10 @@ if(cf)cf.addEventListener("submit",function(e){
   var n=document.getElementById("fn").value.trim(),sv=document.getElementById("fs").value,m=document.getElementById("fm").value.trim();
   var ar=L==="ar";
   var msg=(ar?"مرحباً ميراج، أنا ":"Hello Mirage, I'm ")+(n||"-")+(ar?"\nالخدمة: ":"\nService: ")+sv+(m?(ar?"\nالتفاصيل: ":"\nDetails: ")+m:"");
+  if(window.gtag){
+    window.gtag("event","generate_lead",{method:"contact_form",service:sv,page_location:window.location.href});
+    window.gtag("event","whatsapp_click",{link_url:"https://wa.me/201095453622",link_text:"contact_form_submit",page_location:window.location.href});
+  }
   window.open("https://wa.me/201095453622?text="+encodeURIComponent(msg),"_blank","noopener");
 });
 })();
