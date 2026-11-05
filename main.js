@@ -76,7 +76,7 @@ if(cf)cf.addEventListener("submit",function(e){
   var ar=L==="ar";
   var msg=(ar?"مرحباً ميراج، أنا ":"Hello Mirage, I'm ")+(n||"-")+(ar?"\nالخدمة: ":"\nService: ")+sv+(m?(ar?"\nالتفاصيل: ":"\nDetails: ")+m:"");
   if(window.gtag){
-    window.gtag("event","generate_lead",{method:"contact_form",service:sv,page_location:window.location.href});
+    window.gtag("event","contact_form_submit",{method:"whatsapp_handoff",service:sv,page_location:window.location.href});
     window.gtag("event","whatsapp_click",{link_url:"https://wa.me/201095453622",link_text:"contact_form_submit",page_location:window.location.href});
   }
   window.open("https://wa.me/201095453622?text="+encodeURIComponent(msg),"_blank","noopener");
