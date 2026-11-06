@@ -448,3 +448,120 @@ th{background:var(--c2)}
 @media(prefers-reduced-motion:reduce){
   .card,.step,.btn,.links a{transition:none!important}
 }
+
+
+
+/* MIRAGE refined premium visual layer — CSS-only; preserves page content, SEO and motion */
+:root{
+  --bg:#f7f9fc;
+  --surface:#ffffff;
+  --text:#102b52;
+  --muted:#61738b;
+  --line:#e5ebf3;
+  --glass:rgba(255,255,255,.96);
+  --c1:#2867d5;
+  --c2:#174f9d;
+  --c3:#d90043;
+  --c4:#4b8ce8;
+  --c5:#d90043;
+  --c6:#2867d5;
+}
+body{background:#f7f9fc;color:#102b52}
+.orbs{opacity:.07}
+.top{background:rgba(255,255,255,.97);border-bottom:1px solid #e5ebf3;box-shadow:0 5px 22px rgba(16,43,82,.035)}
+.links a{color:#526780}
+.links a.on{background:#174f9d}
+.strip{background:#102b52}
+.btn{background:#174f9d;box-shadow:0 7px 18px rgba(23,79,157,.14)}
+.btn:hover{background:#2867d5;box-shadow:0 10px 24px rgba(23,79,157,.18)}
+.btn.alt{background:#fff;color:#174f9d;border:1px solid #dce5f0}
+.phead{
+  color:#102b52;
+  background:#fff;
+  border:1px solid #e5ebf3;
+  border-radius:24px;
+  box-shadow:0 14px 38px rgba(16,43,82,.055);
+}
+.phead h1{color:#102b52}
+.phead p{color:#61738b}
+.phead .badge{color:#174f9d;background:#f0f5fc;border-color:#e0e9f5}
+.phead .badge i{background:#d90043}
+.phead .btn{background:#d90043;box-shadow:0 8px 20px rgba(217,0,67,.13)}
+.phead .btn:hover{background:#bd003b}
+.card,.step,.faq,.hs{
+  background:#fff;
+  border-color:#e5ebf3;
+  border-radius:18px;
+  box-shadow:0 7px 22px rgba(16,43,82,.035);
+}
+.card:hover{border-color:#cbd9ec;box-shadow:0 13px 30px rgba(16,43,82,.07)}
+.step{border-top-color:#2867d5}
+.faq{background:#fff}
+.ctaband{
+  background:#102b52;
+  box-shadow:0 16px 38px rgba(16,43,82,.12);
+}
+.foot{background:#0b2345}
+.tablebox{border-color:#e5ebf3}
+th{background:#174f9d}
+
+/* Homepage: calm editorial layout with the existing brand assets and motion intact */
+.home-page{background:#f7f9fc}
+.home-page .top{background:rgba(255,255,255,.97)}
+.home-page .hero{
+  margin-top:30px;
+  padding:66px 58px 34px;
+  color:#102b52;
+  background:#fff;
+  border:1px solid #e5ebf3;
+  border-radius:26px;
+  box-shadow:0 16px 42px rgba(16,43,82,.06);
+}
+.home-page .hero:before,.home-page .hero:after{display:none}
+.home-page .hero .badge{
+  color:#174f9d;
+  background:#f0f5fc;
+  border-color:#e0e9f5;
+}
+.home-page .hero .badge i{background:#d90043}
+.home-page .hero h1{
+  max-width:850px;
+  color:#102b52;
+  font-size:clamp(2.25rem,4.8vw,3.8rem);
+  letter-spacing:-.025em;
+}
+.home-page .hero p{color:#61738b;max-width:760px;line-height:1.95}
+.home-page .hero .btn{
+  background:#174f9d;
+  box-shadow:0 8px 20px rgba(23,79,157,.14);
+}
+.home-page .hero .btn:hover{background:#2867d5}
+.home-page .hero .btn.alt{
+  background:#fff;
+  color:#174f9d;
+  border:1px solid #dce5f0;
+}
+.home-page .marquee{margin-top:30px}
+.home-page .pill{
+  background:#f0f5fc!important;
+  color:#174f9d;
+  border-color:#e0e9f5;
+}
+.home-page .card{
+  background:#fff;
+  border-color:#e5ebf3;
+  border-radius:18px;
+  box-shadow:0 7px 22px rgba(16,43,82,.035);
+}
+.home-page .card:hover{border-color:#cbd9ec;box-shadow:0 13px 30px rgba(16,43,82,.07)}
+.home-page .hs,.home-page .step{background:#fff}
+.home-page .ctaband{background:#102b52}
+.home-page .foot{background:#0b2345}
+@media(max-width:900px){
+  .home-page .hero{padding:48px 32px 28px}
+}
+@media(max-width:640px){
+  .home-page .hero{margin-top:16px;padding:32px 20px 22px;border-radius:20px}
+  .home-page .hero h1{font-size:clamp(1.9rem,8vw,2.65rem)}
+  .phead{padding:32px 20px 24px;border-radius:20px}
+}
