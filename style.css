@@ -965,3 +965,13 @@ section.wrap>.sub{max-width:760px}
   .phead{border-radius:20px}
   .foot{margin-top:56px}
 }
+
+
+/* Preserve the existing inline CTA pairing in the hero */
+.home-page main>section.wrap.hero{
+  display:block;
+  gap:0;
+}
+@media(max-width:640px){
+  .home-page main>section.wrap.hero{display:block}
+}
