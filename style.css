@@ -377,3 +377,74 @@ img,video,iframe,svg,canvas{
 @media(prefers-reduced-motion:reduce){
   .home-page .card,.home-page .btn{transition:none}
 }
+
+
+/* Shared MIRAGE corporate design system — all inner pages */
+:root{
+  --bg:#f5f8fd;--surface:#fff;--text:#102b52;--muted:#5b6f89;
+  --line:#e2eaf5;--glass:rgba(255,255,255,.94);
+  --c1:#2867d5;--c2:#174f9d;--c3:#d90043;--c4:#4b8ce8;
+  --c5:#d90043;--c6:#2867d5;--btn-text:#fff;
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#071a35;--surface:#10294b;--text:#f1f6ff;--muted:#b3c5dc;--line:#29466b;--glass:rgba(7,26,53,.94)}
+}
+:root[data-theme="dark"]{--bg:#071a35;--surface:#10294b;--text:#f1f6ff;--muted:#b3c5dc;--line:#29466b;--glass:rgba(7,26,53,.94)}
+body{background:var(--bg)}
+.orbs{opacity:.12}
+.wrap{max-width:1160px}
+.top{background:var(--glass);border-bottom:1px solid var(--line);box-shadow:0 4px 18px rgba(16,43,82,.035)}
+.links a.on{background:var(--c2)}
+.btn{background:var(--c2);border-radius:12px;box-shadow:0 8px 22px rgba(23,79,157,.16)}
+.btn:hover{background:var(--c1);box-shadow:0 12px 28px rgba(23,79,157,.22)}
+.btn.alt{background:var(--surface);border-color:var(--line);color:var(--text)}
+.phead{
+  position:relative;isolation:isolate;overflow:hidden;
+  margin-top:30px;padding:54px 42px 34px;border-radius:26px;
+  color:#fff;background:
+    radial-gradient(circle at 12% 18%,rgba(75,140,232,.3),transparent 32%),
+    radial-gradient(circle at 90% 95%,rgba(217,0,67,.17),transparent 26%),
+    linear-gradient(125deg,#0b2345 0%,#123e78 58%,#174f9d 100%);
+  box-shadow:0 18px 48px rgba(16,43,82,.12)
+}
+.phead h1{color:#fff;font-size:clamp(2rem,5vw,3.25rem);line-height:1.25}
+.phead p{color:#d4e2f6;max-width:780px;line-height:1.9}
+.phead .badge{color:#e8f1ff;background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.18)}
+.phead .btn{background:var(--c3)}
+section.wrap{margin-top:58px}
+h2{letter-spacing:-.02em}
+h2:after{background:var(--c3);animation:none;width:48px;height:4px}
+.grid{gap:18px}
+.card,.step,.faq,.hs{
+  border-color:var(--line);border-radius:20px;
+  box-shadow:0 7px 24px rgba(16,43,82,.04)
+}
+.card{background:var(--surface);padding:24px}
+.card:before{height:3px;opacity:.72}
+.card:after{opacity:.035}
+.card:hover{box-shadow:0 16px 34px rgba(16,43,82,.085)}
+.card h3{line-height:1.55}
+.card p,.step p,.faq p{line-height:1.85}
+.step{background:var(--surface);border-top-width:3px;padding:20px}
+.step b,.num,.kpis b,.hs b,td.cost{color:var(--c3)}
+.faq{background:var(--surface);padding:18px 20px}
+.ctaband{
+  border-radius:24px;
+  background:radial-gradient(circle at 10% 20%,rgba(75,140,232,.25),transparent 30%),linear-gradient(120deg,#0b2345,#174f9d);
+  animation:none;box-shadow:0 18px 46px rgba(16,43,82,.13)
+}
+.foot{background:#0b2345;border-top:0}
+.foot p,.foot a,.copy,.foot .bn small{color:#c5d5ea}
+.foot a:hover{color:#fff}
+.tablebox{border-color:var(--line);box-shadow:0 7px 24px rgba(16,43,82,.04)}
+th{background:var(--c2)}
+.strip{background:linear-gradient(90deg,#0b2345,#174f9d)}
+@media(max-width:820px){
+  .phead{margin-top:18px;padding:36px 24px 26px;border-radius:22px}
+  .phead h1{font-size:clamp(1.85rem,8vw,2.6rem)}
+  section.wrap{margin-top:46px}
+  .card{padding:21px}
+}
+@media(prefers-reduced-motion:reduce){
+  .card,.step,.btn,.links a{transition:none!important}
+}
