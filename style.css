@@ -883,3 +883,85 @@ html[dir="rtl"] .home-page main>section.wrap.hero{
   background-position:center,38% center;
  }
 }
+
+
+/* MIRAGE premium finish pass — visual-only refinement; preserves all content, assets, routes and motion */
+:root{
+  --mirage-navy:#0b2345;
+  --mirage-blue:#174f9d;
+  --mirage-bright:#3479ed;
+  --mirage-red:#d90043;
+  --mirage-ink:#102b52;
+  --mirage-muted:#5b6f89;
+  --mirage-line:#e2eaf5;
+}
+body{
+  color:var(--mirage-ink);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.wrap{max-width:1160px}
+section.wrap:not(.hero){scroll-margin-top:110px}
+section.wrap>h2{letter-spacing:-.025em}
+section.wrap>.sub{max-width:760px}
+.top{box-shadow:0 6px 24px rgba(11,35,69,.055)}
+.hbar{min-height:72px}
+.links a{font-weight:700;letter-spacing:-.01em}
+.btn{font-weight:800;letter-spacing:-.01em}
+.card,.step,.faq,.hs{
+  border:1px solid var(--mirage-line);
+  box-shadow:0 8px 26px rgba(11,35,69,.045);
+}
+.card{border-radius:20px}
+.card p,.step p,.faq p{color:var(--mirage-muted)}
+.card:before{height:3px}
+.home-page main>section.wrap.hero{
+  min-height:420px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  gap:2px;
+}
+.home-page main>section.wrap.hero .badge{margin-bottom:10px}
+.home-page main>section.wrap.hero h1{
+  max-width:780px;
+  margin-top:12px;
+  margin-bottom:16px;
+  line-height:1.2!important;
+  letter-spacing:-.035em;
+}
+.home-page main>section.wrap.hero p{
+  max-width:690px;
+  margin-bottom:22px;
+}
+.home-page main>section.wrap.hero .marquee{width:100%;margin-top:24px}
+.home-page .card{min-height:190px}
+.home-page .card .ico{border-radius:10px}
+.home-page .hs{border-radius:18px}
+.home-page .ctaband{border-radius:24px}
+.phead{border-radius:24px}
+.phead h1{letter-spacing:-.025em}
+.phead p{max-width:720px}
+.foot{margin-top:76px}
+.foot .wrap{padding-top:8px}
+@media(max-width:900px){
+  .hbar{min-height:66px}
+  .home-page main>section.wrap.hero{min-height:390px}
+  .home-page .card{min-height:0}
+}
+@media(max-width:640px){
+  .home-page main>section.wrap.hero{
+    min-height:0;
+    justify-content:flex-start;
+    padding-top:38px;
+    padding-bottom:26px;
+  }
+  .home-page main>section.wrap.hero h1{
+    max-width:100%;
+    letter-spacing:-.02em;
+  }
+  .home-page main>section.wrap.hero p{max-width:100%}
+  .phead{border-radius:20px}
+  .foot{margin-top:56px}
+}
