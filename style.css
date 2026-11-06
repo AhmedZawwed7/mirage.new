@@ -706,3 +706,83 @@ body:before,body:after,.home-page:before,.home-page:after{opacity:.08!important}
  h2{font-size:clamp(21px,5.5vw,27px)!important}
  p,li,.desc,.muted,.sub,.lead{font-size:14px}
 }
+
+
+/* MIRAGE full-width photographic hero — shared Arabic / English */
+@media(min-width:641px){
+  .wrap{max-width:1200px}
+  .hbar{max-width:1200px}
+}
+.home-page main>section.wrap.hero{
+  width:100%;
+  max-width:none;
+  margin:0 auto!important;
+  padding:clamp(58px,7.2vw,96px) max(24px,calc((100vw - 1200px)/2 + 18px)) 34px;
+  border-radius:0;
+  border:0;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background-color:#0b2d5c;
+  background-image:
+    linear-gradient(100deg,rgba(5,22,48,.94) 0%,rgba(9,39,82,.86) 48%,rgba(18,63,128,.70) 100%),
+    url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2200&q=85")!important;
+  background-position:center,center 46%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  box-shadow:inset 0 -1px 0 rgba(255,255,255,.12),0 18px 48px rgba(8,35,76,.16);
+}
+.home-page main>section.wrap.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 88% 16%,rgba(52,121,237,.25),transparent 38%),
+    linear-gradient(90deg,transparent 68%,rgba(217,0,67,.10));
+  opacity:1!important;
+}
+.home-page main>section.wrap.hero h1,
+.home-page main>section.wrap.hero p,
+.home-page main>section.wrap.hero .badge,
+.home-page main>section.wrap.hero>.btn,
+.home-page main>section.wrap.hero .marquee{
+  position:relative;
+  z-index:1;
+}
+.home-page main>section.wrap.hero h1{max-width:920px;text-shadow:0 2px 18px rgba(0,0,0,.20)}
+.home-page main>section.wrap.hero p{max-width:760px;color:#f0f5ff;text-shadow:0 1px 12px rgba(0,0,0,.22)}
+.home-page main>section.wrap.hero .badge{
+  background:rgba(18,63,128,.48);
+  border-color:rgba(255,255,255,.30);
+  backdrop-filter:blur(8px);
+}
+.home-page main>section.wrap.hero .btn{
+  background:linear-gradient(135deg,#d90043,#b9003a);
+  box-shadow:0 10px 26px rgba(217,0,67,.30);
+}
+.home-page main>section.wrap.hero .btn.alt{
+  background:rgba(10,39,80,.42);
+  color:#fff;
+  border-color:rgba(255,255,255,.48);
+  backdrop-filter:blur(8px);
+}
+.home-page main>section.wrap.hero .pill{
+  background:rgba(18,63,128,.72)!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(6px);
+}
+@media(max-width:640px){
+  .home-page main>section.wrap.hero{
+    padding:42px 20px 24px;
+    background-image:
+      linear-gradient(145deg,rgba(5,22,48,.92),rgba(9,39,82,.86) 58%,rgba(18,63,128,.76)),
+      url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1100&q=80")!important;
+    background-position:center,58% center;
+    background-size:cover;
+    border-radius:0;
+  }
+  .home-page main>section.wrap.hero p{max-width:100%}
+}
