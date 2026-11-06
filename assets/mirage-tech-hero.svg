@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="900" viewBox="0 0 1920 900" fill="none">
+<defs>
+ <linearGradient id="bg" x1="130" y1="40" x2="1770" y2="890" gradientUnits="userSpaceOnUse"><stop stop-color="#071A35"/><stop offset=".52" stop-color="#123F80"/><stop offset="1" stop-color="#2867D5"/></linearGradient>
+ <radialGradient id="blueGlow" cx="0" cy="0" r="1" gradientTransform="matrix(690 390 -440 780 1370 350)" gradientUnits="userSpaceOnUse"><stop stop-color="#4B8CE8" stop-opacity=".72"/><stop offset="1" stop-color="#2867D5" stop-opacity="0"/></radialGradient>
+ <radialGradient id="redGlow" cx="0" cy="0" r="1" gradientTransform="matrix(360 260 -300 420 1630 690)" gradientUnits="userSpaceOnUse"><stop stop-color="#D90043" stop-opacity=".44"/><stop offset="1" stop-color="#D90043" stop-opacity="0"/></radialGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#B9D8FF" stop-opacity=".24"/><stop offset="1" stop-color="#3479ED" stop-opacity=".035"/></linearGradient>
+ <linearGradient id="line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A9D2FF" stop-opacity=".8"/><stop offset="1" stop-color="#3479ED" stop-opacity=".08"/></linearGradient>
+ <filter id="blur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="34"/></filter>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12"/></filter>
+ <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" stroke="#8BBEFF" stroke-opacity=".10" stroke-width="1"/></pattern>
+</defs>
+<rect width="1920" height="900" fill="url(#bg)"/>
+<rect width="1920" height="900" fill="url(#blueGlow)"/>
+<rect width="1920" height="900" fill="url(#redGlow)"/>
+<rect width="1920" height="900" fill="url(#grid)" opacity=".56"/>
+<ellipse cx="1400" cy="440" rx="390" ry="260" fill="#3479ED" opacity=".18" filter="url(#blur)"/>
+<ellipse cx="1660" cy="700" rx="220" ry="140" fill="#D90043" opacity=".16" filter="url(#blur)"/>
+<!-- luminous orbital technology structure -->
+<g opacity=".82">
+ <ellipse cx="1450" cy="430" rx="370" ry="150" transform="rotate(-23 1450 430)" stroke="url(#line)" stroke-width="2"/>
+ <ellipse cx="1450" cy="430" rx="300" ry="205" transform="rotate(35 1450 430)" stroke="#72A9FF" stroke-opacity=".42" stroke-width="2"/>
+ <ellipse cx="1450" cy="430" rx="230" ry="300" transform="rotate(72 1450 430)" stroke="#3479ED" stroke-opacity=".46" stroke-width="2"/>
+ <path d="M1110 625C1240 470 1350 370 1510 330C1640 297 1740 330 1835 405" stroke="#A9D2FF" stroke-opacity=".32" stroke-width="2"/>
+ <path d="M1150 250C1290 360 1450 520 1710 580" stroke="#D90043" stroke-opacity=".55" stroke-width="2"/>
+</g>
+<!-- floating translucent interface panels -->
+<g transform="translate(1080 180)">
+ <rect x="0" y="0" width="330" height="210" rx="22" fill="url(#glass)" stroke="#B8D8FF" stroke-opacity=".48"/>
+ <circle cx="28" cy="28" r="5" fill="#D90043"/><circle cx="47" cy="28" r="5" fill="#72A9FF"/><circle cx="66" cy="28" r="5" fill="#FFFFFF" fill-opacity=".7"/>
+ <path d="M28 155L82 126L130 139L184 82L232 101L292 54" stroke="#72A9FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M28 155L82 126L130 139L184 82L232 101L292 54V180H28Z" fill="#3479ED" fill-opacity=".15"/>
+ <path d="M28 180H302" stroke="#D9EAFF" stroke-opacity=".26"/>
+ <circle cx="184" cy="82" r="8" fill="#D90043" stroke="#FFE2EA" stroke-width="3"/>
+</g>
+<g transform="translate(1450 500) rotate(-8)">
+ <rect width="300" height="190" rx="22" fill="url(#glass)" stroke="#B8D8FF" stroke-opacity=".48"/>
+ <rect x="26" y="28" width="108" height="10" rx="5" fill="#D9EAFF" fill-opacity=".72"/>
+ <rect x="26" y="55" width="70" height="7" rx="3.5" fill="#72A9FF" fill-opacity=".8"/>
+ <rect x="26" y="95" width="248" height="12" rx="6" fill="#0B2B58" fill-opacity=".62"/>
+ <rect x="26" y="95" width="184" height="12" rx="6" fill="#3479ED"/>
+ <rect x="26" y="123" width="248" height="12" rx="6" fill="#0B2B58" fill-opacity=".62"/>
+ <rect x="26" y="123" width="142" height="12" rx="6" fill="#72A9FF"/>
+ <rect x="26" y="151" width="248" height="12" rx="6" fill="#0B2B58" fill-opacity=".62"/>
+ <rect x="26" y="151" width="204" height="12" rx="6" fill="#D90043"/>
+</g>
+<!-- connected nodes -->
+<g stroke="#A9D2FF" stroke-opacity=".56" stroke-width="2">
+ <path d="M1000 620L1140 540L1260 640L1400 520L1560 630L1740 520"/>
+ <path d="M1180 230L1280 310L1410 240L1530 320L1690 230"/>
+</g>
+<g fill="#72A9FF"><circle cx="1000" cy="620" r="7"/><circle cx="1140" cy="540" r="8"/><circle cx="1260" cy="640" r="6"/><circle cx="1400" cy="520" r="9"/><circle cx="1560" cy="630" r="7"/><circle cx="1740" cy="520" r="8"/><circle cx="1180" cy="230" r="6"/><circle cx="1280" cy="310" r="7"/><circle cx="1410" cy="240" r="6"/><circle cx="1530" cy="320" r="8"/><circle cx="1690" cy="230" r="6"/></g>
+<circle cx="1740" cy="520" r="18" fill="#D90043" fill-opacity=".26" filter="url(#shadow)"/><circle cx="1740" cy="520" r="6" fill="#D90043"/>
+<path d="M0 790C370 690 610 860 930 780C1210 710 1470 760 1920 650" stroke="#72A9FF" stroke-opacity=".16" stroke-width="2"/>
+</svg>
