@@ -786,3 +786,73 @@ body:before,body:after,.home-page:before,.home-page:after{opacity:.08!important}
   }
   .home-page main>section.wrap.hero p{max-width:100%}
 }
+
+
+/* MIRAGE brand refinement: stronger hero artwork, tricolor services ticker, subtle blue page texture */
+body{
+  background-color:#f3f7fc;
+  background-image:
+    radial-gradient(rgba(52,121,237,.105) .85px,transparent .95px),
+    radial-gradient(ellipse at 12% 8%,rgba(114,169,255,.10),transparent 38%),
+    linear-gradient(180deg,#eef4fc 0%,#f8faff 44%,#f2f6fc 100%);
+  background-size:30px 30px,100% 620px,100% 100%;
+  background-attachment:fixed;
+}
+
+/* The three MIRAGE logo colors rotate across the moving services strip */
+.marquee .pill:nth-child(3n+1){
+  background:linear-gradient(135deg,#123f80,#174f9d)!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 5px 16px rgba(18,63,128,.20);
+}
+.marquee .pill:nth-child(3n+2){
+  background:linear-gradient(135deg,#3479ed,#72a9ff)!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:0 5px 16px rgba(52,121,237,.20);
+}
+.marquee .pill:nth-child(3n){
+  background:linear-gradient(135deg,#d90043,#a90038)!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 5px 16px rgba(217,0,67,.18);
+}
+
+/* Custom MIRAGE technology artwork: visible, brand-colored and clear behind the copy */
+.home-page main>section.wrap.hero{
+  background-color:#0b2d5c;
+  background-size:cover,cover;
+  background-repeat:no-repeat,no-repeat;
+  box-shadow:inset 0 -1px 0 rgba(255,255,255,.12),0 18px 48px rgba(8,35,76,.16);
+}
+html[dir="ltr"] .home-page main>section.wrap.hero{
+  background-image:
+    linear-gradient(90deg,rgba(5,22,48,.88) 0%,rgba(9,39,82,.62) 43%,rgba(18,63,128,.24) 100%),
+    url("/assets/mirage-tech-hero.svg")!important;
+  background-position:center,center;
+}
+html[dir="rtl"] .home-page main>section.wrap.hero{
+  background-image:
+    linear-gradient(270deg,rgba(5,22,48,.88) 0%,rgba(9,39,82,.62) 43%,rgba(18,63,128,.24) 100%),
+    url("/assets/mirage-tech-hero-rtl.svg")!important;
+  background-position:center,center;
+}
+.home-page main>section.wrap.hero h1,
+.home-page main>section.wrap.hero p{
+  text-shadow:0 2px 18px rgba(0,12,32,.34);
+}
+@media(max-width:640px){
+  html[dir="ltr"] .home-page main>section.wrap.hero{
+    background-image:
+      linear-gradient(90deg,rgba(5,22,48,.86) 0%,rgba(9,39,82,.66) 58%,rgba(18,63,128,.42) 100%),
+      url("/assets/mirage-tech-hero.svg")!important;
+    background-position:center,62% center;
+  }
+  html[dir="rtl"] .home-page main>section.wrap.hero{
+    background-image:
+      linear-gradient(270deg,rgba(5,22,48,.86) 0%,rgba(9,39,82,.66) 58%,rgba(18,63,128,.42) 100%),
+      url("/assets/mirage-tech-hero-rtl.svg")!important;
+    background-position:center,38% center;
+  }
+}
